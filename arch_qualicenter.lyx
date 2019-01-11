@@ -5,6 +5,10 @@
 \save_transient_properties true
 \origin unavailable
 \textclass scrartcl
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{graphs}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language french
@@ -101,6 +105,44 @@ Document d'architecture, principalement technique, pour l'application web
 
 \begin_layout Section
 Existant
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Preview
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "existing.tikz.tex"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Existant
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
