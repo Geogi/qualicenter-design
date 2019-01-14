@@ -7,7 +7,8 @@
 \textclass scrartcl
 \begin_preamble
 \usepackage{tikz}
-\usetikzlibrary{graphs}
+\usetikzlibrary{graphs, fit, shapes.multipart, matrix, positioning, calc}
+\newref{fig}{refcmd={\hyperref[#1]{Figure \ref{#1}}}}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -34,7 +35,16 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -108,23 +118,41 @@ Existant
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
+Actuellement:
+\end_layout
 
-\begin_layout Plain Layout
-\begin_inset Preview
+\begin_layout Itemize
+Un plugin
+\end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "existing.tikz.tex"
+Voir 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "fig:Existant"
+plural "false"
+caps "false"
+noprefix "false"
 
 \end_inset
 
-
+.
 \end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset include
+LatexCommand input
+preview true
+filename "existing.tikz.tex"
 
 \end_inset
 
@@ -132,6 +160,12 @@ filename "existing.tikz.tex"
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Existant"
+
+\end_inset
+
 Existant
 \end_layout
 

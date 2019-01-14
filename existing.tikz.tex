@@ -1,3 +1,11 @@
-\tikz \graph {
-    a -> e;
-};
+\begin{tikzpicture}[
+    node distance=7mm,
+    title/.style={},
+    typetag/.style={draw, rectangle, anchor=west}
+]
+\node (qgis) [title] { QGIS };
+\node (plugin) [below=of qgis.west, typetag] { Plugin };  
+\node [draw, fit={(qgis) (plugin)}] {};  
+\node (dep) at (3cm, 0) [title] { PostGIS };
+\draw (plugin) -> (dep);
+\end{tikzpicture}
